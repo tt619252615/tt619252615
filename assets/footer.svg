@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="72" viewBox="0 0 980 72" role="img" aria-labelledby="title">
+  <title id="title">Less repetition. More creation.</title>
+  <defs><linearGradient id="line"><stop stop-color="#00F5FF" stop-opacity="0"/><stop offset=".35" stop-color="#00F5FF"/><stop offset=".65" stop-color="#FF3CAC"/><stop offset="1" stop-color="#FF3CAC" stop-opacity="0"/></linearGradient></defs>
+  <path d="M0 10H980" stroke="url(#line)"/>
+  <text x="490" y="44" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" letter-spacing="3" fill="#8895B4">LESS REPETITION. MORE CREATION.</text>
+</svg>

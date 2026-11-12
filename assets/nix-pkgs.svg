@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="174" viewBox="0 0 480 174" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">nix-pkgs</title><desc id="desc">ONE FLAKE. A FRESH WORKSPACE. Nix / Flakes / Dev Shells</desc>
+<defs><linearGradient id="wash" x1="480" y1="0" x2="240" y2="174" gradientUnits="userSpaceOnUse"><stop stop-color="#00F5FF" stop-opacity=".13"/><stop offset="1" stop-color="#00F5FF" stop-opacity="0"/></linearGradient></defs>
+<rect x="1" y="1" width="478" height="172" rx="10" fill="#0B0E1D" stroke="#2A3048"/>
+<rect x="2" y="2" width="476" height="170" rx="9" fill="url(#wash)"/>
+<path d="M1 30V11A10 10 0 0 1 11 1H60" stroke="#00F5FF" stroke-width="2"/>
+<path d="M405 1L340 173M435 1L370 173M465 1L400 173" stroke="#00F5FF" stroke-opacity=".07"/>
+<g font-family="'Courier New',monospace">
+<text x="24" y="31" font-size="10" letter-spacing="2" fill="#00F5FF">04 / DEVELOPER EXPERIENCE</text>
+<text x="24" y="76" font-size="29" font-weight="700" letter-spacing="-1" fill="#F2F5FF">nix-pkgs</text>
+<text x="24" y="104" font-size="10" letter-spacing="1" fill="#A0ABC5">ONE FLAKE. A FRESH WORKSPACE.</text>
+<path d="M24 124H456" stroke="#2A3048"/>
+<text x="24" y="150" font-size="11" fill="#00F5FF">Nix / Flakes / Dev Shells</text>
+<path d="M438 146L450 134M440 134H450V144" stroke="#00F5FF" stroke-width="1.5"/>
+</g></svg>
