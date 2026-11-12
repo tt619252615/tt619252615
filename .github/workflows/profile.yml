@@ -1,0 +1,45 @@
+name: Refresh animated profile
+on:
+  schedule:
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/profile.yml'
+      - 'scripts/**'
+permissions:
+  contents: write
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Build activity dashboard
+        run: node scripts/dashboard.cjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate contribution snake
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/snake.svg?palette=github-dark&color_snake=#FF3CAC&color_dots=#161C30,#204A69,#237C9A,#00B7CD,#00F5FF
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Frame contribution animation
+        run: node scripts/dashboard.cjs --wrap-snake
+      - name: Publish generated assets
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/activity.svg assets/toolbox.svg assets/snake.svg
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh contribution animations and activity'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

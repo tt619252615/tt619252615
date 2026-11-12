@@ -9,14 +9,14 @@
     <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 0H4" stroke="#05060E" stroke-opacity=".18"/></pattern>
     <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="3"/></filter>
   </defs>
-  <rect x="1" y="1" width="978" height="368" rx="16" fill="#090B17" stroke="url(#border)" stroke-opacity=".65"/>
+  <style>.spin{transform-box:fill-box;transform-origin:center;animation:spin 16s linear infinite}.pulse{animation:pulse 3s ease-in-out infinite}@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{opacity:.3}}@media(prefers-reduced-motion:reduce){.spin,.pulse{animation:none}}</style><rect x="1" y="1" width="978" height="368" rx="16" fill="#090B17" stroke="url(#border)" stroke-opacity=".65"/>
   <rect x="2" y="2" width="976" height="366" rx="15" fill="url(#grid)"/>
   <ellipse cx="782" cy="177" rx="285" ry="225" fill="url(#aura)"/>
   <path d="M24 46H956" stroke="#FFFFFF" stroke-opacity=".1"/>
   <circle cx="30" cy="25" r="4" fill="#FF3CAC"/><circle cx="46" cy="25" r="4" fill="#AE69FF"/><circle cx="62" cy="25" r="4" fill="#00F5FF"/>
   <g font-family="'Courier New',monospace" font-size="10" letter-spacing="2" fill="#8090B1">
     <text x="86" y="29">tt619252615 / personal_lab</text>
-    <text x="830" y="29" fill="#00F5FF">● SYSTEM ONLINE</text>
+    <text x="830" y="29" fill="#00F5FF" class="pulse">● SYSTEM ONLINE</text>
   </g>
   <g stroke="url(#floor)" stroke-width="1">
     <path d="M490 220L40 369M490 220L180 369M490 220L320 369M490 220V369M490 220L660 369M490 220L800 369M490 220L940 369"/>
@@ -35,9 +35,9 @@
   </g>
   <g transform="translate(773 179)">
     <circle r="88" stroke="#8055FF" stroke-opacity=".3"/>
-    <circle r="68" stroke="#00F5FF" stroke-opacity=".35" stroke-dasharray="3 9"/>
-    <ellipse rx="114" ry="40" transform="rotate(-35)" stroke="#00F5FF" stroke-width="1.5"/>
-    <ellipse rx="114" ry="40" transform="rotate(35)" stroke="#FF3CAC" stroke-width="1.5"/>
+    <circle class="spin" r="68" stroke="#00F5FF" stroke-opacity=".35" stroke-dasharray="3 9"/>
+    <ellipse rx="114" ry="40" stroke="#00F5FF" stroke-width="1.5"><animateTransform attributeName="transform" type="rotate" from="-35" to="325" dur="16s" repeatCount="indefinite"/></ellipse>
+    <ellipse rx="114" ry="40" stroke="#FF3CAC" stroke-width="1.5"><animateTransform attributeName="transform" type="rotate" from="35" to="-325" dur="20s" repeatCount="indefinite"/></ellipse>
     <path d="M0 -47L42 -23V25L0 49L-42 25V-23Z" fill="#111429" stroke="url(#border)" stroke-width="2"/>
     <path d="M-42 -23L0 1L42 -23M0 1V49" stroke="#AE69FF" stroke-width="1.5"/>
     <path d="M-15 -12L-25 -5L-15 2M15 -12L25 -5L15 2M5 -17L-5 7" stroke="#00F5FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -52,4 +52,4 @@
     <text x="748" y="351" fill="#FF68C1">LESS REPETITION ↗</text>
   </g>
   <rect x="2" y="48" width="976" height="277" fill="url(#scan)"/>
-</svg>
+<rect x="24" y="47" width="932" height="2" fill="#00F5FF" opacity=".2"><animate attributeName="y" values="47;323;47" dur="9s" repeatCount="indefinite"/></rect><path d="M28 367H180" stroke="#FF3CAC" stroke-width="2"><animate attributeName="d" values="M28 367H180;M800 367H952;M28 367H180" dur="7s" repeatCount="indefinite"/></path></svg>
